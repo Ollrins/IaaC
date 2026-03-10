@@ -120,24 +120,24 @@ vagrant up --provider=virtualbox
 vagrant status
 vagrant ssh
 ```
-### Внутри ВМ:
+#### Внутри ВМ:
 ```bash
 docker --version
 docker compose version
 exit
 ```
-### Остановка и удаление
+#### Остановка и удаление
 ```bash
 vagrant halt
 vagrant destroy -f
 ```
 
-### Если возникают проблемы с VirtualBox
+#### Если возникают проблемы с VirtualBox
 ```bash
 vagrant plugin install virtualbox
 vagrant plugin list  # проверка установленных плагинов
 ```
-### Дополнительно
+#### Дополнительно
 ```bash
 vboxmanage list runningvms
 vboxmanage list vms
@@ -148,20 +148,20 @@ vboxmanage controlvm "server1.netology" poweroff
 # Создание директории
 mkdir -p ~/packer
 ```
-### Скачивание Packer (версия 1.15.0)
+#### Скачивание Packer (версия 1.15.0)
 ```bash
 wget https://hashicorp-releases.yandexcloud.net/packer/1.15.0/packer_1.15.0_linux_amd64.zip -P ~/packer
 ```
-### Распаковка
+#### Распаковка
 ```bash
 unzip ~/packer/packer_1.15.0_linux_amd64.zip -d ~/packer
 ```
-### Добавление в PATH
+#### Добавление в PATH
 ```bash
 echo 'export PATH="$PATH:/home/ollrins/packer"' >> ~/.profile
 exec -l $SHELL
 ```
-### Проверка
+#### Проверка
 ```bash
 packer --version
 ```
@@ -198,7 +198,7 @@ yc init
 ```bash
 exec -l $SHELL
 ```
-### Проверка настроек
+#### Проверка настроек
 ```bash
 yc config list
 ```
@@ -296,7 +296,7 @@ vagrant destroy -f
 ```bash
 export PS1='\d \t \u@\h:\w\$ '
 ```
-### Для постоянного использования добавить в ~/.bashrc
+##### Для постоянного использования добавить в ~/.bashrc
 Поиск подсети
 ```bash
 yc vpc subnet list --zone ru-central1-a --format table
